@@ -5,12 +5,13 @@ import "../style/Navigation.css";
 const Navigation = () => {
   return (
     <div className="navigation">
+      <img src="s.png" alt="navImg" />
       <ul>
         <NavLink to="/">
           <li> Home</li>
         </NavLink>
         <NavLink to="/About">
-          <li> Aboutv</li>
+          <li> About</li>
         </NavLink>
         <NavLink to="/Formation">
           <li> Formation</li>

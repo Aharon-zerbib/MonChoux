@@ -1,0 +1,92 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+.description {
+  max-width: 800px; /* Limite la largeur du texte pour une meilleure lisibilité */
+  margin-left: 20px;
+  padding: 20px;
+
+  border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+}
+
+.description h1 {
+  font-size: 2.5rem; /* Taille de la police du titre */
+  font-weight: bold;
+  color: #007bff; /* Couleur bleue pour le titre */
+  margin-bottom: 20px; /* Espace en dessous du titre */
+  text-align: center; /* Centrage du titre */
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+.description p br {
+  margin-bottom: 15px; /* Espace supplémentaire autour des sauts de ligne */
+}
+
+.description p em {
+  color: #007bff; /* Accentuez certaines parties en utilisant italique et une couleur différente */
+  font-style: italic;
+}
+
+.description blockquote {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #eaf2f8; /* Fond doux pour les citations */
+  border-left: 5px solid #007bff; /* Barre verticale pour les citations */
+  font-style: italic;
+  color: #000000;
+}
+
+/* Responsive Design pour petits écrans */
+@media (max-width: 768px) {
+  .description {
+    padding: 15px;
+    margin: 30px 15px;
+  }
+
+  .description h1 {
+    font-size: 2rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+}
+.content-container {
+  width: 100%;
+  display: flex;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.txtTitle {
+  display: flex;
+  justify-content: center;
+}
+.capacite {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* espace entre les cubes */
+}
+
+.cube {
+  background-color: #f0f0f0; /* couleur de fond des cubes */
+  border: 1px solid #ccc; /* bordure des cubes */
+  border-radius: 8px; /* coins arrondis */
+  width: 300px;
+  height: 150px;
+  text-align: center; /* centrer le texte */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ombre pour le cube */
+}
+.fa {
+  display: flex;
+}

@@ -1,0 +1,79 @@
+/* Styles pour le conteneur principal */
+.training-info {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Styles pour le bouton */
+.toggle-button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Styles pour le contenu */
+.content {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 10px;
+}
+
+/* Styles pour les titres */
+.content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les paragraphes */
+.content p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Styles pour les listes */
+.content ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Styles pour les éléments de liste */
+.content li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Styles pour les textes en gras */
+.content b {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Styles pour les span avec une taille de police spécifique */
+.content span {
+  font-size: 16px;
+  color: #333;
+}
