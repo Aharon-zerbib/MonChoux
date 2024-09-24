@@ -1,29 +1,90 @@
 import React from "react";
 import "../style/Formulaire.css";
+import Swal from "sweetalert2";
 
 const Formulaire = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "eda7b037-8bf0-4fb7-a4bc-5efcec6f52dc");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+      });
+    }
+  };
   return (
-    <div className="contact-form">
-      <h2>Inscription à une formation</h2>
-      <form>
-        <label htmlFor="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required />
+    <section className="contact">
+      <form onSubmit={onSubmit}>
+        <h2>Contact form</h2>
 
-        <label htmlFor="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom" required />
+        {/* Full name input */}
+        <div className="input-box">
+          <label>Full name</label>
+          <input
+            type="text"
+            className="field"
+            placeholder="Nom prénom"
+            name="name"
+            required
+          />
+        </div>
 
-        <label htmlFor="telephone">Téléphone</label>
-        <input type="tel" id="telephone" name="telephone" required />
+        {/* Email input */}
+        <div className="input-box">
+          <label>Email Address</label>
+          <input
+            type="email"
+            className="field"
+            placeholder="email"
+            name="email"
+            required
+          />
+        </div>
 
-        <label htmlFor="formation">Votre formation</label>
-        <input type="text" id="formation" name="formation" required />
+        {/* Phone number input */}
+        <div className="input-box">
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            className="field"
+            placeholder="Votre numéro de téléphone"
+            name="phone"
+            required
+          />
+        </div>
 
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        {/* Message input */}
+        <div className="input-box">
+          <label>Your message</label>
+          <textarea
+            name="message"
+            className="field mess"
+            placeholder="Entrez votre message"
+            required
+          ></textarea>
+        </div>
 
-        <button type="submit">Envoyer</button>
+        {/* Submit button */}
+        <button type="submit">Send message</button>
       </form>
-    </div>
+    </section>
   );
 };
 
